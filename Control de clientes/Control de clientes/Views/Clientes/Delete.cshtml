@@ -1,0 +1,72 @@
+﻿@model Control_de_clientes.Identity.Cliente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Estas seguro de borrar este registro?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VNOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VNOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VAPELLIDO_PATERNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAPELLIDO_PATERNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VAPELLIDO_MATERNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAPELLIDO_MATERNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VDIRECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VDIRECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VDNI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VDNI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VTELEFONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VTELEFONO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver al registro", "Index")
+        </div>
+    }
+</div>

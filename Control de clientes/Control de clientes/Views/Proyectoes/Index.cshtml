@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Control_de_clientes.Identity.Proyecto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Registro de proyectos</h2>
+
+<p>
+    @Html.ActionLink("Agregar proyecto", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.VNOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VNOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VDESCRIPCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TTIEMPO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.VNOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VNOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VDESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TTIEMPO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IPROYECTO_ID }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.IPROYECTO_ID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.IPROYECTO_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model Control_de_clientes.Identity.Cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VNOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VNOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VAPELLIDO_PATERNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAPELLIDO_PATERNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VAPELLIDO_MATERNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VAPELLIDO_MATERNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VDIRECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VDIRECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VDNI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VDNI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VTELEFONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VTELEFONO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ICLIENTE_ID }) |
+    @Html.ActionLink("Volver al registro", "Index")
+</p>
